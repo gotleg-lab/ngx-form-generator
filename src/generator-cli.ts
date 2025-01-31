@@ -39,7 +39,6 @@ async function main(): Promise<void> {
     .alias('help', 'h').argv;
 
   const spec = await loadSpec(argv['input-spec']);
-
   const file = makeForm(spec);
 
   let fileName = argv['file-name'] || makeFileName(spec) || 'forms.ts';

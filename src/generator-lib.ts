@@ -49,6 +49,7 @@ function makeFieldRules(fieldName: string, definition: Definition): string {
 }
 
 function makeField(fieldName: string, definition: Definition): string {
+  console.log(fieldName, definition.properties[fieldName]['type']);
   if (definition.properties[fieldName]['type'] === 'array') {
     const itemDefinition = definition.properties[fieldName]['items'];
     const minItems = +definition.properties[fieldName]['minItems'] || 1;
